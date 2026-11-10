@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Universe for Ohmmar</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <div id="universe"></div>
+
+  <header class="top-bar">
+    <div class="brand">A UNIVERSE FOR <span>OHMMAR</span></div>
+    <button id="nightBtn" class="small-button">☾ Night mode</button>
+  </header>
+
+  <section id="intro" class="screen">
+    <div class="intro-content">
+      <div class="eyebrow">A LITTLE WORLD, MADE FOR YOU</div>
+      <h1>Somewhere beyond<br>the <span>stars.</span></h1>
+      <p>
+        I made a little universe for you.<br>
+        Twelve worlds, countless stars, and a few secrets.
+      </p>
+      <button id="enterBtn" class="main-button">ENTER YOUR UNIVERSE ↗</button>
+      <div class="hint">TAKE YOUR TIME · EXPLORE EVERYTHING</div>
+    </div>
+  </section>
+
+  <main id="interface" class="hidden">
+    <div class="welcome">
+      <div class="eyebrow">WELCOME TO YOUR UNIVERSE</div>
+      <h2>For you, <span>Ohmmar.</span></h2>
+      <p>Every little light has something to tell you.</p>
+    </div>
+
+    <div class="progress-panel">
+      <div class="progress-label">
+        <span>STARS DISCOVERED</span>
+        <strong id="starCount">0 / 2</strong>
+      </div>
+      <div class="progress-track"><div id="progressFill"></div></div>
+      <div id="progressNote" class="progress-note">
+        Find just 2 glowing stars to unlock your surprise.
+      </div>
+    </div>
+
+    <div class="bottom-hint">DRAG TO EXPLORE · CLICK THE GLOWING OBJECTS</div>
+    <button id="helpBtn" class="help-button">?</button>
+  </main>
+
+  <section id="worldModal" class="modal hidden">
+    <div class="modal-card">
+      <button id="closeModal" class="close-button">×</button>
+      <div id="worldNumber" class="eyebrow">WORLD 01</div>
+      <h2 id="worldTitle">Secret Portal</h2>
+      <p id="worldDescription"></p>
+      <div id="worldStatus" class="world-status"></div>
+      <button id="worldAction" class="main-button">EXPLORE ↗</button>
+    </div>
+  </section>
+
+  <section id="letterModal" class="modal hidden">
+    <div class="modal-card letter-card">
+      <div class="eyebrow">A LITTLE MESSAGE FOR YOU</div>
+      <h2 id="letterTitle">Something from my heart.</h2>
+      <p id="letterText"></p>
+      <button id="letterClose" class="main-button">KEEP EXPLORING</button>
+    </div>
+  </section>
+
+  <section id="ending" class="screen hidden">
+    <div class="intro-content ending-content" id="endingContent">
+      <div class="eyebrow">MY FAVOURITE PART OF THE UNIVERSE</div>
+      <h1>For my<br><span>Ohmmar.</span></h1>
+
+      <p class="final-letter">
+        If I could travel through every galaxy, visit every planet,
+        and see every beautiful thing this universe has to offer,
+        I would still wish to find my way back to you.
+
+        <br><br>
+
+        You are someone I want to make memories with. Someone whose
+        smile can make an ordinary day feel special. I may not always
+        have the perfect words, and I may not always know how to
+        express everything I feel, but I hope you can feel how much
+        you mean to me.
+
+        <br><br>
+
+        I made this little universe because I wanted to give you
+        something different. Something that reminds you that even
+        in a universe filled with billions of stars, there is one
+        person who makes my world feel brighter.
+
+        <br><br>
+
+        And if I had to choose one place to stay forever,
+        I would choose wherever you are.
+
+        <br><br>
+
+        Thank you for being part of my little universe.
+        I hope life gives you countless reasons to smile,
+        endless moments to remember, and all the happiness
+        your heart deserves.
+
+        <br><br>
+
+        No matter how big the universe becomes,
+        you will always be my favourite part of it.
+      </p>
+
+      <div class="final-message">You are my favourite universe.</div>
+      <div class="signature">— made with love, just for you</div>
+      <button id="backBtn" class="main-button">RETURN TO THE STARS</button>
+    </div>
+  </section>
+
+  <div id="cinematicCaption" class="cinematic-caption"></div>
+  <div id="toast" class="toast"></div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
